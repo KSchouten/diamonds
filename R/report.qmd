@@ -1,0 +1,14 @@
+---
+title: "Diamonds"
+format: html
+---
+
+```{r}
+
+library(ggplot2)
+
+ggplot(diamonds) +
+    geom_point(aes(x=carat, y=price, color = cut), alpha = 0.1) +
+    ggtitle(stringr::str_c("Price per carat - ", lubridate::now()))
+
+```
